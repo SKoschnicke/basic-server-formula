@@ -1,2 +1,2 @@
 users:
-  someone: 1000
+  vagrant: 1000

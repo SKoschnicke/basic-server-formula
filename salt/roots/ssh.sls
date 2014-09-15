@@ -18,4 +18,4 @@ ssh:
     - mode: 644
     - template: jinja
     - defaults:
-        allowed_users: {{ users }}
+        allowed_users: {{ pillar.get('users', {}).keys() }}
