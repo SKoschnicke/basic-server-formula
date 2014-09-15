@@ -4,3 +4,4 @@ base:
     - users
     - network
     - git
+    - firewall
