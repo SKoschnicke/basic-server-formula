@@ -18,17 +18,4 @@ bash:
     - password: "$6$sdflkj3r9u3tkdsf$BpZ7i7XaPftEIVk376d31WzSNvQY/OcE3T5vSWgIIE5ksqXbF26y8I83C3XtWk8XM2nmYNl8aydnM.fLOu90l/"
     - require:
       - pkg: bash
-
-{# set ssh keys #}
-/home/{{ username }}/.ssh/authorized_keys:
-  file.managed:
-    - source: salt://ssh-keys/{{ username }}-key.pub
-    - user: {{ username }}
-    - group: {{ username }}
-    - mode: 600
-    - makedirs: true
-    - dir_mode: 700
-    - replace: false
-    - require:
-      - user: {{ username }}
 {% endfor %}
