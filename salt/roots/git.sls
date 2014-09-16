@@ -1,3 +1,3 @@
 {# git for source code versioning #}
-git-core:
+git:
   pkg.installed
